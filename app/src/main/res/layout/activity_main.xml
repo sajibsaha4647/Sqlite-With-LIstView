@@ -36,16 +36,25 @@
             android:hint="Enter Email"
             />
         <EditText
-            android:id="@+id/Password"
+            android:id="@+id/PasswordId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Password"
             />
         <Button
+            android:id="@+id/SaveId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Login"
+            android:text="Save"
+            android:textColor="@color/white"
+            />
+        <Button
+            android:id="@+id/ShowList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Show List"
             android:textColor="@color/white"
             />
     </LinearLayout>
