@@ -2,6 +2,7 @@ package com.example.sqlitelistview;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -60,5 +61,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long rowId = sqLiteDatabase.insert(TABLE_NAME,null,contentValues);
 
         return  rowId ;
+    }
+
+    public Cursor ShowAllData(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery(" SELECT * FROM " + TABLE_NAME,null);
+        return  cursor ;
     }
 }
